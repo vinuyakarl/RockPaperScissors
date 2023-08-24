@@ -1,0 +1,84 @@
+* {
+    font-family: 'Exo', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-image: url('Images/Stars.jpeg');
+    color: #00FF00;
+}
+
+#title {
+    margin: 40px;
+    font-size: 50px;
+}
+
+.choices { /* Container for all choices */
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin: 10vh 5vw;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.choices-img button { /* Buttons for each choice */
+    width: 300px;
+    transition: transform 0.3s;
+    border: 0;
+    background-color: white;
+}
+
+.choices-img button:hover, #restart:hover{
+    transform: scale(1.1);
+}
+
+button img { /* Image in button */
+    max-width: 200px;
+    height: 200px;
+}
+
+figcaption { /* Caption for image in button */
+    font-size: 24px;
+}
+
+.display-picks { /* Display the picks */
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+.display-picks > h1 { /* "Previous Choices" */
+    width: 100%;
+}
+
+.display-picks > ul { /* Each choices made by player and computer */
+    margin: 20px;
+    padding: 0;
+}
+
+.score { /* Score */
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 50px;
+}
+
+#loser, #restart, #title{
+    color: #ff3131;
+}
+
+#hidden {
+    display: none;
+}
+
+#restart { /* Restart button */
+    margin: 30px;
+    margin-top: 40px;
+    font-size: 24px;
+    border: 5px solid #ff3131;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 10%;
+}
