@@ -89,6 +89,7 @@ function displayWinner(winner) {
     
     let declareWinner = document.createElement('h1');
     declareWinner.innerText = `WINNER: ${winner}`;
+    declareWinner.id = "winner";
     const choices = document.querySelector('.choices');
     choices.parentNode.insertBefore(declareWinner, choices);
 }

@@ -11,6 +11,20 @@
     font-size: 50px;
 }
 
+.score { /* Score */
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px 20px;
+    padding: 0px;
+}
+
 .choices { /* Container for all choices */
     display: flex;
     justify-content: space-around;
@@ -42,11 +56,11 @@ figcaption { /* Caption for image in button */
 
 .display-picks { /* Display the picks */
     display: flex;
-    list-style: none;
     flex-wrap: wrap;
     justify-content: center;
     margin: 50px;
 }
+
 
 .display-picks > h1 { /* "Previous Choices" */
     width: 100%;
@@ -57,15 +71,7 @@ figcaption { /* Caption for image in button */
     padding: 0;
 }
 
-.score { /* Score */
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 50px;
-}
-
-#loser, #restart, #title{
+#loser, #restart, #title, #rules > h2{
     color: #ff3131;
 }
 
@@ -81,4 +87,8 @@ figcaption { /* Caption for image in button */
     transition: 0.3s;
     padding: 10px;
     border-radius: 10%;
+}
+
+#winner {
+    padding: 50px;
 }
