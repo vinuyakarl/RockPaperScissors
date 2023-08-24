@@ -6,7 +6,7 @@ function getComputerChoice() {
         Return:  Random choice between options
     */
 
-    const array = ['rock','paper','scissors'];
+    const array = ['spaceship','alien','asteroid'];
     let random = Math.floor((Math.random() * 3));
     return array[random];
 }
@@ -18,20 +18,20 @@ function getPlayerChoice() {
     */
 
     return new Promise((resolve) => {
-        let buttonRock = document.getElementById("rock");
-        let buttonPaper = document.getElementById("paper");
-        let buttonScissors = document.getElementById("scissors");
+        let buttonRock = document.getElementById("spaceship");
+        let buttonPaper = document.getElementById("alien");
+        let buttonScissors = document.getElementById("asteroid");
 
         buttonRock.addEventListener('click', () => {
-            resolve("rock");
+            resolve("spaceship");
         });
 
         buttonPaper.addEventListener('click', () => {
-            resolve("paper");
+            resolve("alien");
         });
 
         buttonScissors.addEventListener('click', () => {
-            resolve("scissors");
+            resolve("asteroid");
         });
     });
 }
@@ -49,9 +49,9 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "None";
     }
-    else if ((playerSelection == "rock" && computerSelection == "scissors") ||
-        (playerSelection == "paper" && computerSelection == "rock") ||
-        (playerSelection == "scissors" && computerSelection == "paper")) {
+    else if ((playerSelection == "spaceship" && computerSelection == "asteroid") ||
+        (playerSelection == "alien" && computerSelection == "spaceship") ||
+        (playerSelection == "asteroid" && computerSelection == "alien")) {
             return "Player";
         }
     else {
@@ -117,7 +117,6 @@ async function game() {
     */
    
     let playerScore = 0, computerScore = 0;
-    let player = "scissors";
     while (playerScore < 5 && computerScore < 5) {
 
         // Waits until user chooses an image (button)
